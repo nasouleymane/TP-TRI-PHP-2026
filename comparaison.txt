@@ -1,0 +1,17 @@
+n = 100 : 4950 comparaisons , 0.43 ms
+n = 500 : 124750 comparaisons , 10.91 ms
+n = 1000 : 499500 comparaisons , 43.3 ms
+n = 2000 : 1999000 comparaisons , 173.53 ms
+n = 5000 : 12497500 comparaisons , 1081.19 ms
+n = 10000 : 49995000 comparaisons , 4329.4 ms 
+
+
+Analyse du tri à bulles :
+
+On remarque que lorsque la taille du tableau augmente, le nombre de comparaisons augmente très rapidement.
+
+Par exemple, quand on multiplie la taille par 10, le nombre de comparaisons est multiplié environ par 100.
+
+Cela signifie que la complexité du tri à bulles est en O(n²).
+
+Le temps d’exécution augmente également très vite, ce qui rend cet algorithme inefficace pour les grands tableaux.
