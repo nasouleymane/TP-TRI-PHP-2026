@@ -7,12 +7,12 @@ $tab = [3,1,6,0,15,5,9];
 echo "Avant de trier : ";
 echo implode(',', $tab) . "<br><br>";
 
-echo "Tri à bulles : ";
+echo "Tri à Insertion : ";
 
-echo implode(',', triBulles($tab)) . "<br><br>";
+echo implode(',', triInsertion($tab)) . "<br><br>";
 
-echo "L'algorithme du tri à bulles a fait " 
-    . triBullesCompte($tab) 
+echo "L'algorithme du tri à Insertion a fait " 
+    . triInsertionCompte($tab) 
     . " comparaisons<br>";
 
 echo "Pour trier un tableau de " 
@@ -22,11 +22,20 @@ echo "Pour trier un tableau de "
 
 $tailles = [100 , 500 , 1000 , 2000 , 5000 , 10000];
 
+//foreach ($tailles as $n) {
+    //$tab = range($n, 1);
+
+    //$nbComp = triBullesCompte($tab);
+    //$temps = triBullesChrono($tab);
+
+    //echo "n = $n : $nbComp comparaisons , $temps ms <br>";
+//}
+
 foreach ($tailles as $n) {
     $tab = range($n, 1);
 
-    $nbComp = triBullesCompte($tab);
-    $temps = triBullesChrono($tab);
+    $nbComp = triInsertionCompte($tab);
+    $temps = triInsertionChrono($tab);
 
     echo "n = $n : $nbComp comparaisons , $temps ms <br>";
 }
